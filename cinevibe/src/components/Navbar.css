@@ -1,0 +1,125 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 0 2rem;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s, backdrop-filter 0.3s, border-color 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(10,10,15,0.92);
+  backdrop-filter: blur(18px);
+  border-bottom-color: var(--border);
+}
+
+.navbar-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--amber);
+  flex-shrink: 0;
+}
+
+.navbar-logo svg { color: var(--amber); }
+
+.navbar-logo span {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  letter-spacing: 0.08em;
+  color: var(--text);
+}
+
+.navbar-logo span em {
+  font-style: normal;
+  color: var(--amber);
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.navbar-links a {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text2);
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.navbar-links a:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.navbar-links a.active {
+  color: var(--amber);
+  background: var(--amber-glow);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icon-btn {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text2);
+  transition: color 0.2s, background 0.2s;
+  background: transparent;
+}
+
+.icon-btn:hover {
+  color: var(--amber);
+  background: var(--amber-glow);
+}
+
+.navbar-search-form {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 8px 4px 16px;
+}
+
+.navbar-search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  width: 220px;
+}
+
+.navbar-search-input::placeholder { color: var(--text3); }
+
+@media (max-width: 768px) {
+  .navbar-links { display: none; }
+  .navbar { padding: 0 1rem; }
+}

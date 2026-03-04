@@ -1,0 +1,14 @@
+.category-page {
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.category-page-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem 2rem 5rem;
+}
+
+@media (max-width: 768px) {
+  .category-page-inner { padding: 1.5rem 1rem 3rem; }
+}

@@ -1,0 +1,59 @@
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 6), 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 1200px) { .movie-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 768px)  { .movie-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; } }
+@media (max-width: 480px)  { .movie-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
+
+.grid-error {
+  padding: 2rem;
+  color: var(--red);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  border: 1px solid rgba(230,57,70,0.3);
+  border-radius: var(--radius);
+  background: rgba(230,57,70,0.08);
+}
+
+.grid-empty {
+  padding: 3rem;
+  color: var(--text2);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Skeleton */
+.skeleton-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.skeleton-poster {
+  aspect-ratio: 2/3;
+  width: 100%;
+  border-radius: 0;
+}
+
+.skeleton-info {
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skeleton-title {
+  height: 14px;
+  border-radius: 4px;
+  width: 80%;
+}
+
+.skeleton-year {
+  height: 10px;
+  border-radius: 4px;
+  width: 40%;
+}
