@@ -32,7 +32,11 @@ app = FastAPI(title="Movie Recommender API", version="3.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # for local streamlit
+    allow_origins=[
+        "https://cine-vibe-xi.vercel.app",
+        "https://cine-vibe-nl1vuvbl2-aanshi-gahlots-projects.vercel.app",
+        "http://localhost:3000",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
